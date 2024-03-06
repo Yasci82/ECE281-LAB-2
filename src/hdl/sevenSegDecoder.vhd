@@ -4,7 +4,7 @@
 -- 
 -- Create Date: 02/29/2024 04:39:09 PM
 -- Design Name: 
--- Module Name: SevenSegmentDisplayDecoder - Behavioral
+-- Module Name: sevenSegDecoder - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -28,19 +28,17 @@ use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
-library UNISIM;
-use UNISIM.VComponents.all;
 
-entity SevenSegmentDisplayDecoder is
+entity sevenSegDecoder is
 --  Port ( );
 port(
 		i_D : in std_logic_vector(3 downto 0);
 		o_S : out std_logic_vector(6 downto 0)
 
 	);
-end SevenSegmentDisplayDecoder;
+end sevenSegDecoder;
 
-architecture Behavioral of SevenSegmentDisplayDecoder is
+architecture Behavioral of sevenSegDecoder is
     -- intermediate signals with initial value
     signal c_Sa : std_logic:= '1';
     signal c_Sb : std_logic:= '1';

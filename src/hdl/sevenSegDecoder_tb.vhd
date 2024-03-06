@@ -4,7 +4,7 @@
 -- 
 -- Create Date: 02/29/2024 04:39:09 PM
 -- Design Name: 
--- Module Name: SevenSegmentDisplayDecoder - Behavioral
+-- Module Name: sevenSegDecoder - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -29,26 +29,26 @@ use IEEE.NUMERIC_STD.ALL;
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
 
-entity SevenSegmentDisplayDecoder_tb is
+entity sevenSegDecoder_tb is
 --  Port ( )
 
-end SevenSegmentDisplayDecoder_tb;
+end sevenSegDecoder_tb;
 
 
-architecture Behavioral of SevenSegmentDisplayDecoder_tb is
+architecture Behavioral of sevenSegDecoder_tb is
     -- intermediate signals with initial value
-    component SevenSegmentDisplayDecoder is
+    component sevenSegDecoder is
           port(
                  i_D : in std_logic_vector(3 downto 0);
                  o_S : out std_logic_vector(6 downto 0)
           );    
-        end component SevenSegmentDisplayDecoder;
+        end component sevenSegDecoder;
         
     signal w_seg: std_logic_vector(7 downto 0) := x"00";
     
     signal w_sw : std_logic_vector(3 downto 0) := x"0";
 begin
-SevenSegmentDisplayDecoder_uut: SevenSegmentDisplayDecoder
+SevenSegmentDisplayDecoder_uut: sevenSegDecoder
 	port map(
 i_D => w_sw,
 o_S => w_seg(6 downto 0)
