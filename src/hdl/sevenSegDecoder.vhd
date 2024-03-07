@@ -80,7 +80,6 @@ o_S(6) <= c_Sg;
             (not i_D(3) and not i_D(2) and i_D(0) ) or
             (not i_D(3) and not i_D(2) and i_D(1) ) or
             (not i_D(3) and i_D(1) and i_D(0) );
-    c_Sg <= (not i_D(3) and i_D(2) and not i_D(1)) or
-            (not i_D(3) and i_D(2) and i_D(1) and i_D(0) );
+    c_Sg <= '1' when (i_D = x"0") or (i_D = x"1") or (i_D = x"7") else '0';
    
 end Behavioral;
