@@ -63,9 +63,9 @@ o_S(6) <= c_Sg;
             (i_D(3) and not i_D(2) and i_D(1) and i_D(0) ) or
             (not i_D(3) and not i_D(2) and not i_D(1) and i_D(0) );
    c_Sb <= (i_D(3) and i_D(2) and not i_D(0) ) or
-                        (i_D(2) and i_D(1) and not i_D(0) ) or
-                        (i_D(3) and i_D(1) and i_D(0) ) or
-                        (not i_D(3) and i_D(2) and not i_D(1) and i_D(0) );
+            (i_D(2) and i_D(1) and not i_D(0) ) or
+            (i_D(3) and i_D(1) and i_D(0) ) or
+            (not i_D(3) and i_D(2) and not i_D(1) and i_D(0) );
     c_Sc <= (not i_D(3) and not i_D(2) and i_D(1) and not i_D(0)) or
             (i_D(3) and i_D(2) and i_D(1) ) or
             (i_D(3) and i_D(2) and not i_D(0) );
@@ -80,7 +80,7 @@ o_S(6) <= c_Sg;
             (not i_D(3) and not i_D(2) and i_D(0) ) or
             (not i_D(3) and not i_D(2) and i_D(1) ) or
             (not i_D(3) and i_D(1) and i_D(0) );
-    c_Sd <= (not i_D(3) and i_D(2) and not i_D(1)) or
+    c_Sg <= (not i_D(3) and i_D(2) and not i_D(1)) or
             (not i_D(3) and i_D(2) and i_D(1) and i_D(0) );
    
 end Behavioral;
